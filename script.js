@@ -1,8 +1,9 @@
 function run() {
 
-    //keep the existing entity and attribute parameters
-    //add term and limit parameters with the user entered values
-    let url = "https://itunes.apple.com/search?entity=musicTrack&attribute=allArtistTerm?entity=musicTrack&attribute=allArtistTerm"
+    //keep the existing entity parameter
+    //add term and limit parameters using user entered values
+    //additional parameters are connected with "&"
+    let url = "https://itunes.apple.com/search?entity=musicTrack
 
     //connects to iTunes api and passes off to process function on success
     $.ajax({
