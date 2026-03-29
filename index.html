@@ -4,13 +4,82 @@
     <meta charset="UTF-8">
     <title>iTunes</title>
     <link href="style.css" rel="stylesheet"/>
+    <script src="data.js"></script>
 </head>
 <body>
+
+    <button id="bSearch">Search</button>
+    <button id="bList">List</button>
+    <button id="bAdd">Add</button>
+    <button id="bRemove">Remove</button>
+
+    <div id="search">
+
+    <h3>Input archers name, choose age division, and discipline!</h3>
+    <h4>When ready, hit GO!</h4>
+    
+    <select id="names"></select>
+    
+    <select id="age">
+        <option value="U15">Cub (U15)</option>
+        <option value="U18">Cadet (U18)</option>
+        <option value="U21">Junior (U21)</option>
+    </select>
+
+    <select id="style">
+        <option value="Barebow">Barebow</option>
+        <option value="Olympic Recurve">Olympic Recurve</option>
+        <option value="Compound">Compound</option>
+    </select>
+
 
     <button onclick="run()">GO!</button>
     
     <table id="output" border="1"></table>
 
+    </div>
+
+    <div id="people">
+
+    <table id="allPeople" border="1"></table>
+
+
+    </div>
+
+    <div id="add">
+        <h2>Add New Athlete</h2>
+        <label>Name: <input type="text" id="newName"></label><br>
+        <label>Age: 
+            <select id="newAge">
+                <option value="U15">U15</option>
+                <option value="U18">U18</option>
+                <option value="U21">U21</option>
+            </select>
+        </label><br>
+        <label>Style: 
+            <select id="newStyle">
+                <option value="Barebow">Barebow</option>
+                <option value="Olympic Recurve">Olympic Recurve</option>
+                <option value="Compound">Compound</option>
+            </select>
+        </label><br>
+    
+        <button id="submitNew">Add Athlete</button>
+
+    </div>
+
+    <div id="remove" style="display:none;">
+        <h2>Remove Athlete</h2>
+        <label>Name: 
+            <select id="namesRemove">
+            </select>
+        </label><br><br>
+
+        <button id="submitRemove">Remove Athlete</button>
+    </div>
+
+    <script src="arrays.js"></script>
+    <!-- <script src="classes.js"></script> -->
     <script src="script.js"></script>
 
 
